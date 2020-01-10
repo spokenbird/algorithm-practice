@@ -1,5 +1,22 @@
 # algorithm-practice
 
+Stones and Jewels - Leetcode #771
+```javascript 
+var numJewelsInStones = function(J, S) {
+    let jewels = new Set();
+    let myJewelsCount = 0;
+    
+    for (const char of J) {
+        jewels.add(char);
+    }
+    for (const char of S) {
+        if (jewels.has(char)) myJewelsCount++;
+    }
+    
+    return myJewelsCount;
+};
+```
+
 Defanging an IP Address - Leetcode #1108
 ```javascript
 var defangIPaddr = function(address) {
