@@ -1,5 +1,17 @@
 # algorithm-practice
 
+Defanging an IP Address - Leetcode #1108
+```javascript
+var defangIPaddr = function(address) {
+    let output = '';
+    for (let i = 0; i < address.length; i++) {
+        address[i] === '.' ? output += '[.]' : output += address[i];
+    }
+    
+    return output;
+};
+```
+
 Two Sum - Leetcode #1
 ```javascript
 var twoSum = function(nums, target) {
