@@ -46,3 +46,23 @@ var twoSum = function(nums, target) {
 
 Three Sum - Leetcode #15
 https://leetcode.com/problems/3sum/
+
+Reverse Int - Leetcode #7
+``` JavaScript
+
+function reverse(int) {
+    let reversedStr = parseInt(
+        int.toString()
+        .split('')
+        .reverse()
+        .join('')
+    );
+    let reversedInt = parseInt(reversedStr) * Math.sign(int);
+    let max = Math.pow(2, 31) - 1;
+    let min = Math.pow(-2, 31);
+    
+    return reversedInt > min && reversedInt < max ? reversedInt : 0;
+    
+}
+
+```
