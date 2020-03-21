@@ -66,3 +66,22 @@ function reverse(int) {
 }
 
 ```
+
+Best Profit Stock Prices I - Leetcode #121
+``` javascript
+
+var maxProfit = function(prices) {
+    let profit = -Infinity;
+    let minPrice = prices[0];
+    
+    if (prices.length === 0 || prices.length === 1) return 0;
+    for (let i = 0; i < prices.length; i++) {
+        let current = prices[i];
+        if (current < minPrice) minPrice = current;
+        if (current - minPrice > profit) profit = current - minPrice;
+    }
+    
+    return profit;
+};
+
+```
